@@ -1,6 +1,7 @@
 ﻿//action
 $(document).ready(function () {
     //start and stop gif loading
+    //
     $(document).ajaxStart(function () {
         $('#loading-gif').addClass('show');
     }).ajaxStop(function () {
