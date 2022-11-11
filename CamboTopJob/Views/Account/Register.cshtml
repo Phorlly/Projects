@@ -1,0 +1,54 @@
+﻿@model CamboTopJob.Models.RegisterViewModel
+@{
+    ViewBag.Title = "Register";
+}
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <div class="panel panel-primary" style="margin-top: 25px">
+            <div class="panel-heading">
+                <h3 class="panel-title text-center">Register New Account</h3>
+            </div>
+            <div class="panel-body">
+                @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+                    @Html.AntiForgeryToken()
+                    <div class="form-group">
+                       
+                        <div class="col-md-12">
+                            @Html.LabelFor(m => m.Email)
+                            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @placeholder = "Enter Your Email" })
+                            @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-warning" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                       
+                        <div class="col-md-12">
+                            @Html.LabelFor(m => m.Password)
+                            @Html.PasswordFor(m => m.Password, new { @class = "form-control", @placeholder = "Enter Your Password" })
+                            @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-warning" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                       
+                        <div class="col-md-12">
+                            @Html.LabelFor(m => m.ConfirmPassword)
+                            @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control", @placeholder = "Enter Confirm Password" })
+                            @Html.ValidationMessageFor(m => m.ConfirmPassword, "", new { @class = "text-warning" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <input type="submit" class="btn btn-default btn-block" value="Register Now" />
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

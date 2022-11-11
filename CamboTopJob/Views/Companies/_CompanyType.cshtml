@@ -1,0 +1,55 @@
+﻿<div class="modal fade" data-backdrop="static" data-keyboard="false" id="companyTypeModal"
+     tabindex="-1" role="dialog" aria-labelledby="companyTypeModal" aria-hidden="true">
+
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div id="loading-gif"></div>
+            @*header*@
+            <div class="modal-header  text-center">
+                <button type="button" class="btn btn-danger btn-xs pull-right" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <b class="modal-title text-uppercase" style="color:darkblue">Manage Company Type</b>
+            </div>
+            <div class="modal-body">
+
+                @*input*@
+                <div class="row">
+                    <div class="col-md-12">
+                        <input type="text" hidden value=""/>
+                        <div class="form-group">
+                            <label for="companyTypeName">Company Type</label>
+                            <input id="companyTypeId" name="companyTypeId" type="text" value="" class="form-control input-sm hidden" />
+                            <input id="companyTypeName" name="companyTypeName" type="text" value="" class="form-control input-sm" placeholder="Enter Company Type" />
+                        </div>
+                    </div>
+                </div>
+
+                @*button*@
+                <div class="row">
+                    <div class="col-md-12">
+                        <button type="button" id="btnCompanyType" onclick="CompanyTypeAction();" class="btn btn-primary btn-block btn-sm">Add New</button>
+                    </div>
+                </div>
+
+                <hr />
+                @*table*@
+                <di class="row"> 
+                    <div class="col-md-12">
+                        <table class="table table-hover table-bordered table-condensed table-striped" style="width: 100%" id="companyTypeTable">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Company Type</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </di>
+            </div>
+        </div>
+    </div>
+</div>
+

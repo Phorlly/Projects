@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <button class="btn btn-primary btn-sm" type="button" data-toggle="modal" data-target="#companyTypeModal">Manage Company Type</button>
+        </div>
+    </div>
+</div>
+
+@Html.Partial("_CompanyType")
+
+@section scripts{
+    @Scripts.Render("~/Scripts/Functions/companytype.js")
+    }
